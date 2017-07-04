@@ -1,29 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta charset="utf-8">
-
+  <!-- Google Fonts and Boostrap -->
+  <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+  <!-- Local CSS -->
   <link rel="stylesheet" href="static/main.css">
 </head>
 <body>
 
   <main class="container">
     <section class="search-form">
-      <form action="/search.json" method="GET">
-        <label>Please enter in Github username.</label>
-        <input type = "text" id="username" value="" />
-        <input type="submit" id="submitbtn" value="Submit" />
-      </form>
+      <div class="col">
+        <form action="/search.json" method="GET">
+          <h2>Please enter a Github username to see his/her followers.</h2>
+          <br>
+          <input type = "text" id="username" value="" />
+          <input type="submit" id="submitbtn" value="Submit" />
+        </form>
+      </div>
     </section>
-    <br>
-    <hr>
+    <div id="msg" class="alert" role="alert"></div>
+    <hr black>
     <section class="handler">
-      <h3>Github's Handle: </h3>
-      <h2 id="info"></h2>
-      <h4>Followers Count: </h4> <strong id="count"></strong>
+      <div class="col">
+        <h2 id="info"></h2>
+        <h4 id="count"></h4>
+      </div>
+      </section>
+    <button id="load">Load More</button>
 
-    </section>
-    <button class="load-more">Load More</button>
     <br>
     <section class="result">
       <div id="display"></div>
@@ -31,7 +41,20 @@
 
   </main>
 
+
+<!-- jQuery and Bootstrap CDN -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Local JS -->
 <script src="static/search_api.js"></script>
 </body>
 </html>

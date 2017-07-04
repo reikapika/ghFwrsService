@@ -11,13 +11,12 @@ def hello():
 
 @app.route("/search.json", methods=['GET'])
 def search():
-
     username = request.args.get('username')
     url = "https://api.github.com/users/" + username
-    print url
+
     headers = {
                 'Accept': 'application/vnd.github.v3+json',
-                'Authorization': 'token {}'.format(GITHUB_KEY),
+                # 'Authorization': 'token {}'.format(GITHUB_KEY),
                }
 
     params = {
@@ -27,10 +26,21 @@ def search():
 
     resp = requests.get(url=url,params=params,headers=headers)
     user = resp.json()
-    fwrs_url = user['followers_url']
-    fwrs = requests.get(fwrs_url).json()
-    pprint.pprint(user)
-    return jsonify(user=user,fwrs=fwrs)
+    # Status code check for proper frontend interaction
+    if resp.status_code == 200:
+        pprint.pprint(user)
+        fwrs_url = user['followers_url']
+        fwrs = requests.get(fwrs_url).json()
+        return jsonify(user=user,fwrs=fwrs)
+
+    # Error handle if invalid username was entered
+    else:
+        if user['message'] == "Not Found":
+            return jsonify(result='Null')
+        else:
+            return jsonify(result='Error')
+
+
 
 
 if __name__ == "__main__":
