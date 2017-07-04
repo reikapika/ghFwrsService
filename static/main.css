@@ -1,0 +1,29 @@
+
+body {
+    text-align: center;
+    font-family: Verdana,sans-serif;
+    font-size: 0.9em;
+}
+
+header {
+    padding: 10px;
+    color: white;
+    background-color: black;
+}
+
+section {
+    margin: 5px;
+    padding: 10px;
+    background-color: lightgrey;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    border-radius: 1em;
+    margin: 10px;
+}
+
+button {
+    font-size: 20px;
+}
