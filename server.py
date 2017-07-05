@@ -11,7 +11,9 @@ def hello():
 
 @app.route("/search.json", methods=['GET'])
 def search():
+
     username = request.args.get('username')
+    print username
     url = "https://api.github.com/users/" + username
 
     headers = {
@@ -39,8 +41,6 @@ def search():
             return jsonify(result='Null')
         else:
             return jsonify(result='Error')
-
-
 
 
 if __name__ == "__main__":

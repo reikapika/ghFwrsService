@@ -1,16 +1,14 @@
 'use strict';
 
-console.log("hey");
-
-const FWRS = {}
 let placeHolder = document.getElementsByClassName("result");
 let fwrs = document.getElementById('display');
 
 // Ajax call to server for a the user info
 document.getElementById("submitbtn").addEventListener("click",
     function(evt){
-        let username = document.getElementById("username").value;
         evt.preventDefault();
+        let username = document.getElementById("username").value;
+
         $.ajax({
           type: "GET",
           url: "/search.json",
