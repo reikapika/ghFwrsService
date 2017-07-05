@@ -20,11 +20,13 @@ This problem has been broke down into two parts:
 
 ## Technical choices 🙈
 --------------------
-* Python - Python is the best
+As a junior software engineer, my choice of technology is limited and tend to be straight forward. I have experience in building projects of a full stack web app and below are similar tech stacks except my previous project involves dealing with database modeling and ORMs.
+
+* Python - Python is the best (requests library is used for API calls)
 * Flask - Flask is a micro framework that is easy to get it running fast and doesn't come with a bundle of packages like Django that are not necessary in this problem. Maybe it can made purely frontend, but I prefer to have some code in the back especially when I use my secret token for API calls.
 * Javascript - JS is a must for the frontend, I tried my best to make it look organized and nice but I guess I'm not really a frontend guru.
 * jQuery - I keep jQuery to minimal use because I wanted to practice vanilla JS to modify the DOM elements (also I've heard goods and bads about jQuery in the industry, so I chose to use a little just to let you know that I know this stuff 🤓)
-* HTML5/CSS -
+* HTML5/CSS - Basic templating
 * Github API v3 - of course
 
 
