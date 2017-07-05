@@ -11,7 +11,7 @@ The problem of this coding challenging is to make API calls to the Github API an
 This problem has been broke down into two parts:
 * 1) get the user and the followers_url in one API call (pass in authentication in headers or parameters to avoid rate limit)
 * 2) get the actual list of followers of this user using the followers_url in another API call (upon successfully called the followers_url endpoint, increment the page number so it will fetch the next payload when the "load more" button is clicked)
-
+* If I had more time to spend on this problem, I would write some unit tests for the backend routes and assert the AJAX calls is working well. On the frontend, perhaps I would look into Jasmine for JS testing or Selenium. Moreover, I would spend more time on coming up with additional edge cases and conditions to improve the quality of the service. At current stage, this service needs more security and stability.
 
 ## Technical choices 🙈
 
