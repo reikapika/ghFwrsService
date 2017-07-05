@@ -13,7 +13,6 @@ def hello():
 def search():
 
     username = request.args.get('username')
-    print username
     url = "https://api.github.com/users/" + username
 
     headers = {
