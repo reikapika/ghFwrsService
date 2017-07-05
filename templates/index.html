@@ -9,7 +9,7 @@
         integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
         crossorigin="anonymous">
   <!-- Local CSS -->
-  <link rel="stylesheet" href="static/main.css">
+  <link rel="stylesheet" href="static/css/main.css">
 </head>
 <body>
 
@@ -19,7 +19,7 @@
         <form action="/search.json" method="GET">
           <h2>Please enter a Github username to see his/her followers.</h2>
           <br>
-          <input type = "text" id="username" value="" />
+          <input type = "text" id="username" value="" required/>
           <input type="submit" id="submitbtn" value="Submit" />
         </form>
       </div>
@@ -55,6 +55,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 <!-- Local JS -->
-<script src="static/search_api.js"></script>
+<script src="static/js/search_api.js"></script>
 </body>
 </html>

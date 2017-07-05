@@ -1,17 +1,12 @@
 Github User Search 💃🏻💃🏻💃🏻
 ==================
 
-* Description of the problem and solution.
-* Reasoning behind your technical choices, including architectural trade-offs
-    you might have made, anything you left out, or what you might do differently
-    if you were to spend additional time on the project.
-* Link to other code you're particularly proud of.
-* Link to your resume or public profile.
-* Link to the hosted application.
-
+This is a micro web service for users to look up a Github user and see the list of the user's followers.
+Only avatars are shown in the result, and you may visit the follower's account simply by clicking on the avatar.
+The "Load More" button should fetch a new payload of the followers if the user has more than 30 followers. Each request only returns 30 followers.
 
 ## Description 👩🏻‍💻
---------------
+
 The problem of this coding challenging is to make API calls to the Github API and get the desired user back.
 This problem has been broke down into two parts:
 * 1) get the user and the followers_url in one API call (pass in authentication in headers or parameters to avoid rate limit)
@@ -19,7 +14,7 @@ This problem has been broke down into two parts:
 
 
 ## Technical choices 🙈
---------------------
+
 As a junior software engineer, my choice of technology is limited and tend to be straight forward. I have experience in building projects of a full stack web app and below are similar tech stacks except my previous project involves dealing with database modeling and ORMs.
 
 * Python - Python is the best (requests library is used for API calls)
@@ -31,7 +26,7 @@ As a junior software engineer, my choice of technology is limited and tend to be
 
 
 ## Links of Proud 🥂🦄
------------------
+
 * LinkedIn - https://www.linkedin.com/
 * Github - https://github.com/shioramen/
 * San Franasia - http://sanfranasia.herokuapp.com/
