@@ -3,10 +3,10 @@
 let placeHolder = document.getElementsByClassName("result");
 let fwrs = document.getElementById('display');
 let submitBtn = document.getElementById("submitbtn");
+let clicked = false;
 
 function submitSuccess(evt){
     evt.preventDefault();
-
     let username = document.getElementById("username").value;
 // Ajax call to server for a the user info
     $.ajax({
@@ -15,11 +15,10 @@ function submitSuccess(evt){
       success: resultHandler,
       data: {username:username},
     });
-    submitBtn.removeEventListener("click", function(evt){console.log(evt);});
 }
 
 submitBtn.addEventListener("click", submitSuccess);
-
+submitBtn.removeEventListener("click", submitSuccess);
 
 // Callback for successful Ajax
 function resultHandler(result){

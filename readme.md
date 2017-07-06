@@ -3,7 +3,7 @@ Github User Search 💃🏻💃🏻💃🏻
 
 This is a micro web service for users to look up a Github user and see the list of the user's followers.
 Only avatars are shown in the result, and you may visit the follower's account simply by clicking on the avatar.
-The "Load More" button should fetch a new payload of the followers if the user has more than 30 followers. Each request only returns 30 followers.
+The "Load More" button should fetch a new payload of the followers if the user has more than 30 followers. Each request only returns 30 followers. I hope you enjoy playing with it as I enjoyed building it. 🙃
 
 ## Description 👩🏻‍💻
 
@@ -11,7 +11,7 @@ The problem of this coding challenging is to make API calls to the Github API an
 This problem has been broke down into two parts:
 * 1) get the user and the followers_url in one API call (pass in authentication in headers or parameters to avoid rate limit)
 * 2) get the actual list of followers of this user using the followers_url in another API call (upon successfully called the followers_url endpoint, increment the page number so it will fetch the next payload when the "load more" button is clicked)
-* If I had more time to spend on this problem, I would write some unit tests for the backend routes and assert the AJAX calls is working well. On the frontend, perhaps I would look into Jasmine for JS testing or Selenium. Moreover, I would spend more time on coming up with additional edge cases and conditions to improve the quality of the service. At current stage, this service needs more security and stability.
+* If I had more time to spend on this problem, I would write some unit tests for the backend routes and assert the AJAX calls is working well. On the frontend, perhaps I would look into Jasmine for JS testing or Selenium. Moreover, I would spend more time on coming up with additional edge cases and conditions to improve the quality of the service. At current stage, this service is more like a beta testing model since there are some minor things that need to be taken care of if I had more time to work on it.
 
 ## Technical choices 🙈
 
